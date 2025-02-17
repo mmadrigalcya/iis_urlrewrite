@@ -1,0 +1,15 @@
+<configuration>
+    <system.webServer>
+        <rewrite>
+            <rules>
+                <rule name="SimpleRedirect" stopProcessing="true">
+                    <match url="^url1$" />
+                    <conditions>
+                        <add input="{HTTP_HOST}" pattern="^cyamoda.com$" />
+                    </conditions>
+                    <action type="Redirect" url="https://www.cyamoda.com" />
+                </rule>
+            </rules>
+        </rewrite>
+    </system.webServer>
+</configuration>
